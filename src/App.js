@@ -7,7 +7,7 @@ import Test from './Test';
 class App extends Component {
   constructor(){
     super()
-    this.state={totalCounter:0}
+    this.state={totalCounter:0, counter:8}
 
   }
   totalCount=()=>{
@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Total count:{`${this.state.totalCounter}`}</h1>
-      <Test totalCount={this.totalCount} />
+      <Test totalCount={this.totalCount} counter={this.state.counter} />
       <Test totalCount={this.totalCount}/>
       </div>
     );

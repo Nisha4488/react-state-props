@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 
 
 class Test extends Component {
-constructor(){
-  super( )
-  this.state={counter:0, open:true, name:'Nisha'}
+constructor(props){
+  super(props )
+  this.state={counter:this.props.counter, open:true, name:'Nisha'}
 }
   runFunc=()=>{
     this.setState({counter:this.state.counter +1, open:!this.state.open})
@@ -28,5 +28,9 @@ constructor(){
     );
   }
 }
+
+Test.defaultProps = {
+  counter: 0
+};
 
 export default Test;
