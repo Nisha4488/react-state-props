@@ -9,7 +9,7 @@ constructor(){
 }
   runFunc=()=>{
     this.setState({counter:this.state.counter +1, open:!this.state.open})
-    this.props.totalcount
+    this.props.totalCount()
   }
   changeName=()=>{
     this.setState({name: this.state.name === 'Nisha'?'Sneha':'Nisha'})
